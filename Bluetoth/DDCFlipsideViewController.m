@@ -21,8 +21,19 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
+    
+    if([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]){
+        [self performSelector:@selector(setNeedsStatusBarAppearanceUpdate)];
+    } else{
+        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+    }
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning

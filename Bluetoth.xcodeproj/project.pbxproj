@@ -25,6 +25,7 @@
 		7299E33C18BA5F55007CA5E1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7299E31718BA5F55007CA5E1 /* CoreData.framework */; };
 		7299E34418BA5F55007CA5E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7299E34218BA5F55007CA5E1 /* InfoPlist.strings */; };
 		7299E34618BA5F55007CA5E1 /* BluetothTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7299E34518BA5F55007CA5E1 /* BluetothTests.m */; };
+		7299E35018BA5F62007CA5E1 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7299E34F18BA5F62007CA5E1 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		7299E34118BA5F55007CA5E1 /* BluetothTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BluetothTests-Info.plist"; sourceTree = "<group>"; };
 		7299E34318BA5F55007CA5E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7299E34518BA5F55007CA5E1 /* BluetothTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BluetothTests.m; sourceTree = "<group>"; };
+		7299E34F18BA5F62007CA5E1 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7299E35018BA5F62007CA5E1 /* CoreBluetooth.framework in Frameworks */,
 				7299E31418BA5F55007CA5E1 /* CoreGraphics.framework in Frameworks */,
 				7299E31818BA5F55007CA5E1 /* CoreData.framework in Frameworks */,
 				7299E31618BA5F55007CA5E1 /* UIKit.framework in Frameworks */,
@@ -111,6 +114,7 @@
 		7299E31018BA5F55007CA5E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7299E34F18BA5F62007CA5E1 /* CoreBluetooth.framework */,
 				7299E31118BA5F55007CA5E1 /* Foundation.framework */,
 				7299E31318BA5F55007CA5E1 /* CoreGraphics.framework */,
 				7299E31518BA5F55007CA5E1 /* UIKit.framework */,
@@ -395,10 +399,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bluetoth/Bluetoth-Prefix.pch";
 				INFOPLIST_FILE = "Bluetoth/Bluetoth-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9849A95B-40A2-4DA8-BA7C-B5A101FBF8CE";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -408,10 +414,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bluetoth/Bluetoth-Prefix.pch";
 				INFOPLIST_FILE = "Bluetoth/Bluetoth-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9849A95B-40A2-4DA8-BA7C-B5A101FBF8CE";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

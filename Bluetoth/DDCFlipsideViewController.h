@@ -12,6 +12,7 @@
 
 @protocol DDCFlipsideViewControllerDelegate
 - (void)flipsideViewControllerDidFinish:(DDCFlipsideViewController *)controller;
+- (void)didSelectNewScale:(NSString *)scale;
 @end
 
 @interface DDCFlipsideViewController : UIViewController
