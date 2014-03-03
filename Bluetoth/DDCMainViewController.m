@@ -31,6 +31,7 @@
 
 #pragma mark - Flipside View
 
+// Flipside stuff
 - (void)flipsideViewControllerDidFinish:(DDCFlipsideViewController *)controller
 {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -39,6 +40,15 @@
 -(void)didSelectNewScale:(NSString *)scale{
     //TODO
 }
+
+-(void)didSelectUnit:(NSString *)unit{
+    //TODO
+}
+
+-(void)didUpdateBrightnessValue:(float)value{
+    //TODO
+}
+//Flipside stuff end
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -201,7 +211,8 @@
 
 -(void)viewWillDisappear:(BOOL)animated{
     NSLog(@"StoppedScan");
-    [_centralManager stopScan];
+    if([_centralManager state] == CBCentralManagerStatePoweredOn)
+        [_centralManager stopScan];
 }
  
 - (IBAction)didTouchSetScale:(id)sender {
