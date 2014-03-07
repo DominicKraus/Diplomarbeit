@@ -21,6 +21,17 @@
     _data = [[NSMutableData alloc] init];
     
     _setScaleButton.enabled = false;
+    
+    UITapGestureRecognizer *recog = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:recog];
+    
+    [_scaleText setKeyboardType:UIKeyboardTypeNumberPad];
+    [_scaleText2 setKeyboardType:UIKeyboardTypeNumberPad];
+    
+}
+
+- (void)dismissKeyboard{
+    [_scaleText resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,7 +53,7 @@
 }
 
 -(void)didSelectUnit:(NSString *)unit{
-    //TODO
+    _unit = unit;
 }
 
 -(void)didUpdateBrightnessValue:(float)value{
@@ -210,15 +221,19 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    NSLog(@"StoppedScan");
-    if([_centralManager state] == CBCentralManagerStatePoweredOn)
+    if([_centralManager state] == CBCentralManagerStatePoweredOn){
         [_centralManager stopScan];
+        NSLog(@"StoppedScan");
+    }
 }
- 
+
 - (IBAction)didTouchSetScale:(id)sender {
-    NSData *data = [_scaleText.text dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *completeString = [[[[_scaleText.text stringByAppendingString:@":"]stringByAppendingString:_scaleText2.text]stringByAppendingString:@"&"]stringByAppendingString:_unit];
     
-    NSLog(@"Try to send data to peripheral");
+    NSData *data = [completeString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    
+    NSLog(@"Try to send data to peripheral: %@",completeString);
     [_discoveredPeripheral writeValue:data forCharacteristic:_discoveredCharacteristic type:CBCharacteristicWriteWithoutResponse];
 }
 @end

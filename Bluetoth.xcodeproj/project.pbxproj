@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		723EFCCA18C8528600147B07 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 723EFCC918C8528600147B07 /* Settings.m */; };
 		7299E31218BA5F55007CA5E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7299E31118BA5F55007CA5E1 /* Foundation.framework */; };
 		7299E31418BA5F55007CA5E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7299E31318BA5F55007CA5E1 /* CoreGraphics.framework */; };
 		7299E31618BA5F55007CA5E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7299E31518BA5F55007CA5E1 /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		723EFCC818C8528600147B07 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		723EFCC918C8528600147B07 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		7299E30E18BA5F55007CA5E1 /* Bluetoth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bluetoth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7299E31118BA5F55007CA5E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7299E31318BA5F55007CA5E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,6 +98,8 @@
 		7299E30518BA5F55007CA5E1 = {
 			isa = PBXGroup;
 			children = (
+				723EFCC818C8528600147B07 /* Settings.h */,
+				723EFCC918C8528600147B07 /* Settings.m */,
 				7299E31918BA5F55007CA5E1 /* Bluetoth */,
 				7299E33F18BA5F55007CA5E1 /* BluetothTests */,
 				7299E31018BA5F55007CA5E1 /* Frameworks */,
@@ -270,6 +275,7 @@
 			files = (
 				7299E32A18BA5F55007CA5E1 /* Bluetoth.xcdatamodeld in Sources */,
 				7299E33018BA5F55007CA5E1 /* DDCFlipsideViewController.m in Sources */,
+				723EFCCA18C8528600147B07 /* Settings.m in Sources */,
 				7299E32D18BA5F55007CA5E1 /* DDCMainViewController.m in Sources */,
 				7299E32418BA5F55007CA5E1 /* DDCAppDelegate.m in Sources */,
 				7299E32018BA5F55007CA5E1 /* main.m in Sources */,
@@ -404,7 +410,7 @@
 				GCC_PREFIX_HEADER = "Bluetoth/Bluetoth-Prefix.pch";
 				INFOPLIST_FILE = "Bluetoth/Bluetoth-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Bluetoth;
 				PROVISIONING_PROFILE = "9849A95B-40A2-4DA8-BA7C-B5A101FBF8CE";
 				WRAPPER_EXTENSION = app;
 			};
@@ -420,7 +426,7 @@
 				GCC_PREFIX_HEADER = "Bluetoth/Bluetoth-Prefix.pch";
 				INFOPLIST_FILE = "Bluetoth/Bluetoth-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Bluetoth;
 				PROVISIONING_PROFILE = "9849A95B-40A2-4DA8-BA7C-B5A101FBF8CE";
 				WRAPPER_EXTENSION = app;
 			};
@@ -443,7 +449,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "BluetothTests/BluetothTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BluetothTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -462,7 +468,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bluetoth/Bluetoth-Prefix.pch";
 				INFOPLIST_FILE = "BluetothTests/BluetothTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BluetothTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

@@ -19,7 +19,9 @@
 @property (strong, nonatomic) CBPeripheral *discoveredPeripheral;
 @property (strong, nonatomic) CBCharacteristic *discoveredCharacteristic;
 @property (strong, nonatomic) NSMutableData *data;
+@property (strong, nonatomic) NSString *unit;
 @property (weak, nonatomic) IBOutlet UITextField *scaleText;
+@property (weak, nonatomic) IBOutlet UITextField *scaleText2;
 @property (weak, nonatomic) IBOutlet UIButton *setScaleButton;
 
 
