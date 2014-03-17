@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DDCAppDelegate.h"
 
 @interface Settings : NSObject
 
@@ -17,5 +18,7 @@
 @property(readwrite,nonatomic)NSString *unit;
 
 +(Settings*)getInstance;
+-(BOOL)retreiveCoreData;
+-(BOOL)saveCoreData;
 
 @end

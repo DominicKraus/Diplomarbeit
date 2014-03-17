@@ -49,15 +49,31 @@
 }
 
 -(void)didSelectNewScale:(NSString *)scale{
-    //TODO
+    NSData *data = [scale dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSLog(@"Send scale information to display: %@", scale);
+    
+    if(_discoveredPeripheral)
+        [_discoveredPeripheral writeValue:data forCharacteristic:_discoveredCharacteristic type:CBCharacteristicWriteWithoutResponse];
 }
 
 -(void)didSelectUnit:(NSString *)unit{
-    _unit = unit;
+    NSData *data = [unit dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSLog(@"Send scale information to display: %@", unit);
+    
+    if(_discoveredPeripheral)
+        [_discoveredPeripheral writeValue:data forCharacteristic:_discoveredCharacteristic type:CBCharacteristicWriteWithoutResponse];
 }
 
 -(void)didUpdateBrightnessValue:(float)value{
-    //TODO
+    int brightness = (int) (value*100);
+    NSString *string = [NSString stringWithFormat:@"B%d", brightness];
+    
+    NSLog(@"Send brightness information to display: %@", string);
+    
+    if(_discoveredPeripheral)
+        [_discoveredPeripheral writeValue:[string dataUsingEncoding:NSUTF8StringEncoding] forCharacteristic:_discoveredCharacteristic type:CBCharacteristicWriteWithoutResponse];
 }
 //Flipside stuff end
 
@@ -127,6 +143,7 @@
     }
     
     for (CBService *service in peripheral.services) {
+        NSLog(@"Service found! %@", [service description]);
         [peripheral discoverCharacteristics:nil forService:service];
     }
     // Discover other characteristics
@@ -140,6 +157,7 @@
     }
     
     for (CBCharacteristic *characteristic in service.characteristics) {
+        NSLog(@"Characteristic found! %@", [characteristic description]);
         [peripheral setNotifyValue:YES forCharacteristic:characteristic];
         _discoveredCharacteristic = characteristic;                             //vl die falsche Characteristic, daher möglicherweise zuerst einmal etwas empfangen notwendig
     }
@@ -207,7 +225,6 @@
                 }
             }
          */
-        
          [_centralManager cancelPeripheralConnection:_discoveredPeripheral];
     }
 }
@@ -228,7 +245,7 @@
 }
 
 - (IBAction)didTouchSetScale:(id)sender {
-    NSString *completeString = [[[[_scaleText.text stringByAppendingString:@":"]stringByAppendingString:_scaleText2.text]stringByAppendingString:@"&"]stringByAppendingString:_unit];
+    NSString *completeString = [[_scaleText.text stringByAppendingString:@":"]stringByAppendingString:_scaleText2.text];
     
     NSData *data = [completeString dataUsingEncoding:NSUTF8StringEncoding];
     

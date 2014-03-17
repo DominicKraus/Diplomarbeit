@@ -7,7 +7,6 @@
 //
 
 #import "DDCAppDelegate.h"
-
 #import "DDCMainViewController.h"
 
 @implementation DDCAppDelegate

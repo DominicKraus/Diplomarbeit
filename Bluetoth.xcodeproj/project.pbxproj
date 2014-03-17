@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7220F31018C9D1DF00C9A9A6 /* Scales.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7220F30E18C9D1DF00C9A9A6 /* Scales.xcdatamodeld */; };
 		723EFCCA18C8528600147B07 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 723EFCC918C8528600147B07 /* Settings.m */; };
 		7299E31218BA5F55007CA5E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7299E31118BA5F55007CA5E1 /* Foundation.framework */; };
 		7299E31418BA5F55007CA5E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7299E31318BA5F55007CA5E1 /* CoreGraphics.framework */; };
@@ -16,7 +17,6 @@
 		7299E32018BA5F55007CA5E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7299E31F18BA5F55007CA5E1 /* main.m */; };
 		7299E32418BA5F55007CA5E1 /* DDCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7299E32318BA5F55007CA5E1 /* DDCAppDelegate.m */; };
 		7299E32718BA5F55007CA5E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7299E32518BA5F55007CA5E1 /* Main.storyboard */; };
-		7299E32A18BA5F55007CA5E1 /* Bluetoth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7299E32818BA5F55007CA5E1 /* Bluetoth.xcdatamodeld */; };
 		7299E32D18BA5F55007CA5E1 /* DDCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7299E32C18BA5F55007CA5E1 /* DDCMainViewController.m */; };
 		7299E33018BA5F55007CA5E1 /* DDCFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7299E32F18BA5F55007CA5E1 /* DDCFlipsideViewController.m */; };
 		7299E33218BA5F55007CA5E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7299E33118BA5F55007CA5E1 /* Images.xcassets */; };
@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7220F30F18C9D1DF00C9A9A6 /* Scales.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Scales.xcdatamodel; sourceTree = "<group>"; };
 		723EFCC818C8528600147B07 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		723EFCC918C8528600147B07 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		7299E30E18BA5F55007CA5E1 /* Bluetoth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bluetoth.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,7 +55,6 @@
 		7299E32218BA5F55007CA5E1 /* DDCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDCAppDelegate.h; sourceTree = "<group>"; };
 		7299E32318BA5F55007CA5E1 /* DDCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDCAppDelegate.m; sourceTree = "<group>"; };
 		7299E32618BA5F55007CA5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7299E32918BA5F55007CA5E1 /* Bluetoth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bluetoth.xcdatamodel; sourceTree = "<group>"; };
 		7299E32B18BA5F55007CA5E1 /* DDCMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDCMainViewController.h; sourceTree = "<group>"; };
 		7299E32C18BA5F55007CA5E1 /* DDCMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDCMainViewController.m; sourceTree = "<group>"; };
 		7299E32E18BA5F55007CA5E1 /* DDCFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDCFlipsideViewController.h; sourceTree = "<group>"; };
@@ -132,15 +132,11 @@
 		7299E31918BA5F55007CA5E1 /* Bluetoth */ = {
 			isa = PBXGroup;
 			children = (
-				7299E32218BA5F55007CA5E1 /* DDCAppDelegate.h */,
-				7299E32318BA5F55007CA5E1 /* DDCAppDelegate.m */,
-				7299E32518BA5F55007CA5E1 /* Main.storyboard */,
-				7299E32B18BA5F55007CA5E1 /* DDCMainViewController.h */,
-				7299E32C18BA5F55007CA5E1 /* DDCMainViewController.m */,
-				7299E32E18BA5F55007CA5E1 /* DDCFlipsideViewController.h */,
-				7299E32F18BA5F55007CA5E1 /* DDCFlipsideViewController.m */,
+				72B9A87B18CD9D1800AB6D04 /* AppDelegate */,
+				72B9A87C18CD9E0400AB6D04 /* Storyboards */,
+				72B9A87D18CD9E0F00AB6D04 /* ViewController */,
 				7299E33118BA5F55007CA5E1 /* Images.xcassets */,
-				7299E32818BA5F55007CA5E1 /* Bluetoth.xcdatamodeld */,
+				7220F30E18C9D1DF00C9A9A6 /* Scales.xcdatamodeld */,
 				7299E31A18BA5F55007CA5E1 /* Supporting Files */,
 			);
 			path = Bluetoth;
@@ -173,6 +169,34 @@
 				7299E34218BA5F55007CA5E1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		72B9A87B18CD9D1800AB6D04 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7299E32218BA5F55007CA5E1 /* DDCAppDelegate.h */,
+				7299E32318BA5F55007CA5E1 /* DDCAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		72B9A87C18CD9E0400AB6D04 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7299E32518BA5F55007CA5E1 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		72B9A87D18CD9E0F00AB6D04 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7299E32B18BA5F55007CA5E1 /* DDCMainViewController.h */,
+				7299E32C18BA5F55007CA5E1 /* DDCMainViewController.m */,
+				7299E32E18BA5F55007CA5E1 /* DDCFlipsideViewController.h */,
+				7299E32F18BA5F55007CA5E1 /* DDCFlipsideViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,12 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7299E32A18BA5F55007CA5E1 /* Bluetoth.xcdatamodeld in Sources */,
 				7299E33018BA5F55007CA5E1 /* DDCFlipsideViewController.m in Sources */,
 				723EFCCA18C8528600147B07 /* Settings.m in Sources */,
 				7299E32D18BA5F55007CA5E1 /* DDCMainViewController.m in Sources */,
 				7299E32418BA5F55007CA5E1 /* DDCAppDelegate.m in Sources */,
 				7299E32018BA5F55007CA5E1 /* main.m in Sources */,
+				7220F31018C9D1DF00C9A9A6 /* Scales.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,13 +531,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		7299E32818BA5F55007CA5E1 /* Bluetoth.xcdatamodeld */ = {
+		7220F30E18C9D1DF00C9A9A6 /* Scales.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				7299E32918BA5F55007CA5E1 /* Bluetoth.xcdatamodel */,
+				7220F30F18C9D1DF00C9A9A6 /* Scales.xcdatamodel */,
 			);
-			currentVersion = 7299E32918BA5F55007CA5E1 /* Bluetoth.xcdatamodel */;
-			path = Bluetoth.xcdatamodeld;
+			currentVersion = 7220F30F18C9D1DF00C9A9A6 /* Scales.xcdatamodel */;
+			path = Scales.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

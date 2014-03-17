@@ -77,9 +77,9 @@
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    NSLog(@"Did select new unit %@", [_pickerData objectAtIndex:row]);
     [self.delegate didSelectUnit:[_pickerData objectAtIndex:row]];
     [settings setUnit:[_pickerData objectAtIndex:row]];
-    NSLog(@"Did select new unit %@", [_pickerData objectAtIndex:row]);
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -123,11 +123,10 @@
         return;
     }
     
-    [self.delegate didSelectNewScale:[_tableData objectAtIndex:indexPath.row]];
-    [settings setIndexPath:indexPath];
-    
     NSLog(@"Did select new scale %@", [_tableData objectAtIndex:indexPath.row]);
     
+    [self.delegate didSelectNewScale:[_tableData objectAtIndex:indexPath.row]];
+    [settings setIndexPath:indexPath];
 
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
@@ -154,14 +153,15 @@
 #pragma mark - Actions
 
 - (IBAction)didChangeBrightnessValue:(id)sender {
-    [self.delegate didUpdateBrightnessValue:[_brightnessSlider value]];
-    [settings setBrightness:[_brightnessSlider value]];
     NSLog(@"Did change Brightness: %f", [_brightnessSlider value]);
 }
 
 - (IBAction)done:(id)sender
 {
     [settings setTableData:_tableData];
+    [self.delegate didUpdateBrightnessValue:[_brightnessSlider value]]; //too fast for arduino in the didChangeBrigthnessValue-Method.
+    [settings setBrightness:[_brightnessSlider value]];
+    //[settings saveCoreData];
     [self.delegate flipsideViewControllerDidFinish:self];
 }
 

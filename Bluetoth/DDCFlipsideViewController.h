@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *scaleTable;
 @property (weak, nonatomic) IBOutlet UISlider *brightnessSlider;
 @property (weak, nonatomic) IBOutlet UIPickerView *unitPicker;
+
 @property (strong, nonatomic) NSMutableArray *pickerData;
 @property (strong, nonatomic) NSMutableArray *tableData;
 @property (strong, nonatomic) NSIndexPath *oldCheckMark;
